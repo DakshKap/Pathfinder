@@ -1,14 +1,13 @@
-## Getting Started
+# PathFinder
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project helps you find shortest path around part of Toronto.
+Uses graphs and related algorithms to find shortest path.
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Map:
+![Map](resources/map.png)
 
-## Dependency Management
+![Graph Map](resources/node_map.png)
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+
