@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) throws Exception {
@@ -12,8 +14,22 @@ public class App {
                         {56,48},{57,58},{57,49},{57,60},{58,57},{58,59},{58,61},{59,58},{59,51},{59,63},{60,57},{60,65},{61,60},{61,58},{62,61},{62,65},{63,62},{63,59},{63,68},{64,56},{65,60},{38,49},
                         {65,62},{65,66},{66,65},{66,74},{67,66},{67,75},{68,67},{68,63},{68,69},{69,68},{69,70},{70,69},{70,71},{70,76},{71,70},{71,55},{71,77},{72,71},{72,64},{73,72},{73,79},{74,66},
                         {74,75},{75,74},{75,67},{76,70},{76,77},{77,76},{77,71},{77,78},{78,77},{78,72},{78,79},{79,73}};
+                        
         Graph cityBlock = init(numNodes, edges);
-        System.out.println(cityBlock.bfs(1).toString());
+        printPath(cityBlock.getShortestPath(1, 79));
+        
+    }
+    public static void printPath(List<Integer> path){
+        if(path.isEmpty()){
+            System.out.println("No path exists between the two nodes.");
+        }else{
+            StringBuilder pathStr = new StringBuilder();
+            for(int i=0;i<path.size()-1;i++){
+                pathStr.append(path.get(i)+"->");
+            }
+            pathStr.append(path.get(path.size()-1));
+            System.out.println("Path: "+ pathStr.toString());
+        }
     }
     public static Graph init(int numNodes, int[][] edges){
         //Initialize graph
